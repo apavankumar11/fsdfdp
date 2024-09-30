@@ -1,0 +1,29 @@
+.c1{
+    font-size: 2rem;
+}
+.c2{
+    font-size: 5rem;
+}
+.c3{
+    font-size: 3em;
+}
+div_g{
+    font-size: 2rem;
+    background-color: yellowgreen;
+}
+.c4{
+    font-size: 3em;
+}
+.percent_div{
+    width: 400px;
+    height: 250px;
+    border: 1px solid red;
+}
+.c5{
+    width: 50%;
+    background-color: greenyellow;
+}
+.c6{
+    width: 50vw;
+    background-color: cyan;
+}
