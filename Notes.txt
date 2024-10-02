@@ -1,0 +1,25 @@
+01-10-2024-Notes
+----------------
+Flex
+*****
+?
+Arranging elements with respect to X-Axis/main-axis
+properties
+**********
+1) display: Flex - used to convert vertical/blocklevel display to inline/horizantal display
+2) justify-content: flex-start/center/flex-end/space-between/space-around/space-evenly
+3) to move vertically we have align-items
+    align-items: stretch/center/flex-start/flex-end;
+    parent element height madatory
+4) change the flex direction of flex-items
+    flex-direction: row/row-reverse/column/column-reverse
+5) wrap the flex-items
+    flex-wrap: wrap/nowrap/wrap-reverse
+6) order property is to change the order of item, applicable for item property
+    order: n(integer)
+7) flex-basis - to indicate size to flex-item applicable to item property
+    flex-basis: number;
+8) flex-grow while enlarging the page grow proprtion to particular item/element 
+    flex-grow : number;
+9) flex-shrink used to specify shrink proprtion to particular item/element 
+    flex-shrink: number;
