@@ -38,6 +38,8 @@ is used to reperesent the webpages into different devices without distrabances o
 Media queries or RWD(Responsive Web Design)
 fixed dimention for any devices is called "Breakpoints"
 
+SASS - to apply the styles called as pre-processor of CSS
+it has high rendering capability
 
 Git Lab
 -------
