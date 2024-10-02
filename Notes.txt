@@ -23,3 +23,34 @@ properties
     flex-grow : number;
 9) flex-shrink used to specify shrink proprtion to particular item/element 
     flex-shrink: number;
+
+Grid layout
+***********
+is used for complex type of layouts
+1) grid-template-rows is used to divided the screen partions similar to frameset
+    grid-template-rows: 10% 80% 10%
+2) grid-template-columns is used to partion the screen
+    grid-template-columns: 15% 70% 15% 
+
+@media queries
+---------------
+is used to reperesent the webpages into different devices without distrabances of code
+Media queries or RWD(Responsive Web Design)
+fixed dimention for any devices is called "Breakpoints"
+
+
+Git Lab
+-------
+1. create account
+(find the username)
+2. create project in GitLab
+
+
+
+Jenkins
+-------
+1) configure GitLab in Jenkins
+
+2) configure kubernetes
+
+3) configure cloud server/local server(linux server)

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .parent{
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 10% 80% 10%;
+            grid-template-columns: 15% 70% 15%;
+            gap: 5px;
+        }
+        .header{
+            grid-column: 1/4;
+            grid-row: 1/2;
+            background-color: brown;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        .leftmenu{
+            background-color: chartreuse;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border-radius: 10px;
+            
+        }
+        .main{
+            background-color: darkgreen;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        .rightmenu{
+            background-color: lightgreen;
+            grid-row: 2/3;
+            grid-column: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        .footer{
+            background-color: indigo;
+            grid-column: 1/4;
+            grid-row: 3/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Parent division-->
+    <div class="parent">
+        <!-- Grid Item1-->
+         <div class="header">KL University</div>
+         <!-- Grid Item2 -->
+          <div class="leftmenu">Left Menu</div>
+          <!--Grid Item3-->
+          <div class="main">Main</div>
+          <!--Grid Item4-->
+          <div class="rightmenu">Right Menu</div>
+          <!-- Grid Item5-->
+           <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
