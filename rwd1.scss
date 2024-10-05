@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    &__img{
+        flex: 1;
+        border: 1px solid red;
+    }
+    &__text{
+        flex: 1;
+        border: 1px solid green;
+        &__1{}
+        &__2{}
+        &__3{}
+        &__4{}
+    }
+
+}

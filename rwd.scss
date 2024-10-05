@@ -28,11 +28,47 @@ $mobile:576px;
         height: 80vh;
         background-color: salmon;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        &__img{}
-        &__content{}
+        // justify-content: space-evenly;
+        // align-items: center;
+        gap: 2px;
+        &__img{ 
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+            background-image: url("./logo9.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &__content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid green;
+            &__p1{
+                font-size: 2vw;
+                font-weight: bold;
+            }
+            [class^="container__main__content__p"]:not(.container__main__content__p1){
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+            // &__p2{
+            //     font-size: 2rem;
+            //     font-weight: bold;
+            // }
+            // &__p3{
+            //     font-size: 2rem;
+            //     font-weight: bold;
+            // }
+            // &__p4{
+            //     font-size: 2rem;
+            //     font-weight: bold;
+            // }
+            
+        }
     }
     &__footer{
         height: 10vh;
@@ -65,8 +101,31 @@ $mobile:576px;
     &__main{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        &__img{
+            // background-image: url("./logo9.png");
+            // background-repeat: no-repeat;
+            // background-position: center center;
+        }
+        &__content{
+            &__p1{
+                font-size: large;
+                font-weight: bold;
+            }
+            [class^="container__main__content__p"]:not(.container__main__content__p1){
+                display: none;
+            }
+            // &__p2{
+            //     display: none;
+            // }
+            // &__p3{
+            //     display: none;
+            // }
+            // &__p4{
+            //     display: none;
+            // }
+        }
     }
     &__footer{
         display: flex;

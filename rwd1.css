@@ -1,0 +1,18 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container__img {
+  flex: 1;
+  border: 1px solid red;
+}
+.container__text {
+  flex: 1;
+  border: 1px solid green;
+}/*# sourceMappingURL=rwd1.css.map */

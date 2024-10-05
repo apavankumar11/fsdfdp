@@ -56,3 +56,77 @@ Jenkins
 2) configure kubernetes
 
 3) configure cloud server/local server(linux server)
+
+BootStrap
+---------
+BootStrap is the CSS framework
+BootStrap framework we will use for RWD
+we must include BootStrap CDN in header section of webpages
+Current version is BootStrap 5.X
+
+Colors
+------
+1) primary
+2) success
+3) danger
+4) warning
+5) secondary
+6) light
+7) dark
+
+All the BootStrap CDNS are recommended to be placed at the end body section
+NavBar
+------
+how to create hamburger Icon-
+    navbar-toggler & navbar-toggler-Icon
+    navbar-item 
+        navbar-link
+    dropdown menu
+    dropdown dropdown-toggler data-toggler="dropdown"
+    dropdown-menu   
+        dropdown-item   
+            dropdown-divider
+    ToolTip
+    data-toggle="tooltip"
+        data-placement="top"/"right"/"bottom"/"left"
+        title="title"
+
+    Breadcrumb
+        Breadcrumb-item
+
+1) GitLab(Code Repo)
+    when changes detected
+2) Jenkins-pulled to docker
+3) Docker & kubernetes - pulled to cloud 
+4) Cloud ---(Netlify/AWS/AZURE/GCP)
+the eniter process is called CI/CD(Contineous Integration/Contineous Delivery)
+
+
+Docker
+------
+To build webapplication required software installations needed
+Technonologies
+1-ReactJS
+2-SpringBoot
+3-NoSqlDB(MongoDB/CassandraDB)
+4-NodeJS(to run ReactJS)
+5-Java(to run SpringBoot)
+6-mongoose library(to run MongoDB)
+
+what ever the Technonologies/packages required keep all them in one container(docker).
+
+to check docker available or not 
+    docker --version
+
+after install the docker successfully
+-create one folder(contanarization)
+    - create one html file(index.html)
+    - create one css file(styles.css)
+    - create one Dockerfile
+        to make dockerfile to dockerimage
+        FROM nginx:alpine
+        COPY index.html /usr/share/nginx/html/index.html(path)
+        COPY styles.css /usr/share/nginx/html/styles.css
+
+        to expose the image on particular proprtion
+        EXPOSE 80
