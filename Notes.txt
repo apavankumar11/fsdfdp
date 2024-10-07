@@ -130,3 +130,30 @@ after install the docker successfully
 
         to expose the image on particular proprtion
         EXPOSE 80
+commands to create image
+    docker build -t imagename .
+    docker run -d -p portno:exposeno(doker image) imagename
+
+
+kubernetes to run the doker image
+start the minikube
+    minikube start
+    minikube -p minikube doker-env --shell commands
+
+    doker build -t imagename .
+
+    create the deployment file called filename.yaml
+    goto line 17 and change to docker image name.
+    apply the .yaml file 
+        kubectl apply -f filename.yaml
+        kubectl get pods
+        minikube ip
+            it generate ip address to run the image in docker
+
+Jenkins
+--------
+creating the docker image manulally is not recommended 
+instead by using jenkins 
+    create a job 
+        if any commits are detected in Repo convert docker to dockerimage
+        
