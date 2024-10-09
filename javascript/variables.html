@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x = 100
+        // document.write(x,"<br>") //100
+        // let x = 100;
+        // let x = 200;
+        // document.write(x); //Uncaught SyntaxError: redeclaration of let 
+        // var x = 100;
+        // {
+        //     var x=200;
+        // }
+        // document.write(x)
+
+        // function klu_fun(){
+        //     var x=100;
+        //     {
+        //         let y=200;
+        //     }
+        //     document.write("<br>",x);
+        //     document.write(y);
+        // }
+        // klu_fun()
+
+        // Strings
+        // ------------
+        // let msg = `FSD with DevOps`;
+        // let wish = `Welcome to ${msg}`
+        // document.write(wish);
+        // document.write("<br>",wish.substr(0,15));
+        // let x = 123454565657567676867878775654435465465635766867754645356767657675643113435546657788798697865451354657658769879786465425435465764878797n
+        // document.write(x);
+
+        // let x = Symbol("KL Univesity")
+        // document.write(x);
+
+        // let x;
+        // document.write(x,"<br>"); //undefined
+        // document.write(x+10,"<br>"); //NaN
+
+        // let x = null;
+        // document.write(x,"<br>"); //null
+        // document.write(x+10,"<br>"); //10
+
+        // document.write(typeof "KL Univesity","<br>") //string
+        // document.write(typeof 10,"<br>") // number
+        // document.write(typeof true,"<br>") //boolean
+        // document.write(typeof undefined,"<br>") //undefined
+        // document.write(typeof null,"<br>") // object
+        // document.write(typeof 100n,"<br>") // bigint
+        // document.write(typeof Symbol("kkkk"),"<br>") //symbol
+        // document.write(typeof {},"<br>") // object
+        // document.write(typeof [],"<br>") //object
+        // document.write(typeof function kl(){},"<br>") //function
+        
+        // constant keyword introduces in ES6
+
+        const x = 200;
+        //x = 100; // Uncaught TypeError: invalid assignment to const 'x'
+        // let arr = [10,20,30,40,50];
+        // document.write(arr.at(0),"  ",arr.at(-5),"<br>");
+        const arr = [10,20,30,40,50];
+        // arr=[] // get error
+        // arr=[100,200,300,400,500] // TypeError
+        arr[0] = 100
+        arr[5] = 600
+        document.write(arr)
+    </script>
+</body>
+</html>

@@ -157,3 +157,109 @@ instead by using jenkins
     create a job 
         if any commits are detected in Repo convert docker to dockerimage
         
+JavaScript
+----------
+variables
+---------
+1) var   2) let    3) const  4) nokeyword
+let & const introduced in ES6 version
+
+rules for variable declaration
+    1) a-z,A-Z,0-9, $ and _
+    2) should not start with number
+
+String
+-------
+    1) ""
+    2) ''
+    3) ``(backtick)
+        - Template literal
+
+BinInt
+-------
+the number suffix with 'n' - BigInt
+
+Symbol datatype
+---------------
+to hide the variable we use the symbol datatype
+ex: let x = Symbol("KLUniversity");
+
+undefined
+---------
+
+undefined with any arthimetic operations results NaN
+
+null
+-----
+null with any arthimetic operations null becomes 0
+
+to know the datatype is "typeof variable "
+
+09-10-2024 Agenda
+---------- -------
+1) const keyword
+2) use strict
+3) functions
+    types of functions
+    ES6 enhanced related to functions
+4) gitlab keys
+
+JSON(JavaScript Object Notation)
+--------------------------------
+    it is light weight collection of data
+    it is used to transfer the data over network
+    the notation used to represented as key value particular
+    ex: let obj = {
+        frontend:"React",
+        backend:"Node",
+        database:"MongoDB"
+    };
+
+Functions in JS
+---------------
+    business logic
+    reuse business logic
+    Types of Functions
+    - function declarations(Named functions)
+    - function expression / anonymous functions
+    - arrow functions(from ES6)
+    - constructor functions
+    - callback functions
+    - IIFE (Immidiate Invokable Functional Expression)(from ES9)
+    - Generator functions
+    - Higher order functions 
+
+function declarations(Named functions)
+-----------------------------------------
+function with user defined name called as function declaration / named functions
+syntax:
+function functionname(param1,param2,param3,....,param-n){
+// business logic
+}
+calling of function - functionname(arg1,arg2,arg3,.....,arg-n);
+
+function expression / anonymous function
+-----------------------------------------
+function without name called as function expression / anonymous function
+syntax:
+let variablename = function (param1,param2,param3,....,param-n){
+// business logic
+}
+calling of function - variablename(arg1,arg2,arg3,.....,arg-n);
+
+arrow function
+--------------
+arrow functions simplifies the business logic
+these arrow functions are introduced in ES6 version and we will represent with the help of "=>"
+syntax:
+
+function definition
+-------------------
+let functionname = (param1,param2,param3,....,param-n) => {
+    // business logic
+}
+
+call the functions
+------------------
+functionname(arg1,arg2,arg3,....,arg-n);
+

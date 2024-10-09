@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            frontend:"ReactJS",
+            backend:"NodeJS",
+            database:"MongoDB"
+        };
+        let x = obj.frontend;
+        document.write(x,"<br>")
+        x = obj["backend"];
+        document.write(x,"<br>")
+        let {frontend,backend,database} = obj // destructuring from ES6
+        document.write(frontend,backend,database);
+
+        // for accessing the object we use for...in loop
+        for(let key in obj){
+            document.write("<br>",key," : ",obj[key])
+        }
+        obj.stack = "MERN Stack";
+        let {stack} = obj
+        document.write("<br>",stack);
+        for(let key in obj){
+            document.write("<br>",key," : ",obj[key])
+        }
+
+    </script>
+</body>
+</html>
