@@ -21,11 +21,42 @@
         // let msg = db_fun('asynchrnous calls');
         // document.write(msg)
 
-        let db_fun = function(){
-            document.write("Soon, we will connect to asynchrnous calls")
+        // let db_fun = function(){
+        //     document.write("Soon, we will connect to asynchrnous calls")
+        // }
+        // db_fun();
+
+        // let db_fun = function(param){
+        //     document.write(`Soon, we will connect to ${param}`)
+        // }
+        // db_fun('asynchrnous calls');
+
+        // let db_fun = function(param){
+        //     return (`Soon, we will connect to ${param}`)
+        // }
+        // let msg = db_fun('asynchrnous calls')
+        // document.write(msg);
+
+        // let db_fun = (param) =>{
+        //     document.write(`Soon, we will connect to ${param}`)
+        // }
+        // db_fun('asynchrnous calls');
+
+        // let db_fun = (param)=>{
+        //     return (`Soon, we will connect to ${param}`)
+        // }
+        // let msg = db_fun('asynchrnous calls')
+        // document.write(msg);
+
+        // spread operator introduces in ES6, 
+        // spread operator acts like an array
+        let demo_func = (...param1) => {
+            console.log(param1);
         }
-        db_fun();
-        
+        demo_func();
+        demo_func(10,20,30);
+        demo_func(10,undefined,30)
+        demo_func(undefined,null)
     </script>
 </body>
 </html>

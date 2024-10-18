@@ -263,3 +263,148 @@ call the functions
 ------------------
 functionname(arg1,arg2,arg3,....,arg-n);
 
+
+14-10-2024
+-----------
+1) creating ec2 server(instance)
+2) installation of jdk in ec2
+3) installation of Jenkins
+4) installation of docker
+5) installation of gitlab
+6) CI/CD pipeline
+    GitLab --> WebHooks ---> Jenkins --->Docker Image ----> deploy Docker image in EC2 instance(workflow)
+prepare GitLab repo with source code
+************************************
+cicd-pipeline(folder structure)
+    src
+        index.html
+        styles.css
+        script.JS
+    jenkins
+        jenkinsfile
+    Dockerfile
+
+To provide the repo as CI/CD 
+    open the repo
+    goto settings
+        click on general
+            click on Advanced
+                provide the new namespace and click on Transfer buttons and select the CI/CD
+                under visibility --> project visibility --> public
+                click on save changes
+
+EC2 Creation
+************
+sign into console as root user
+    goto search option and enter EC2
+        under launce instance select --> launch instance
+        application os image --> ubuntu os
+                instance type --> search t3.large
+                create new key pair --> provide the name and select .ppk for windows
+                -- authentication file will be download and provide the name
+        configure storage
+            30
+
+ip address: 13.50.109.216
+
+commands to install jdk in es2
+sudo apt update
+sudo apt install default-jdk
+java --version
+
+install git in EC2 instance
+***************************
+sudo apt install git
+git --version
+
+install Jenkins in EC2 instance
+*******************************
+goto jenkins.io execute two commands
+    https://pkg.jenkins.io/debian-stable/
+sudo apt update
+
+sudo apt install jenkins
+jenkins --version
+
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+retrive password
+****************
+sudo systemctl status jenkins
+jenkins password: b5ea7c599230477097142fa981b63b72
+
+installing the docker in EC2 instance
+**************************************
+1) execute first two commands from docker.io website
+    https://docs.docker.com/engine/install/ubuntu/
+2) sudo systemctl start docker
+3) sudo systemctl enable docker
+4) sudo systemctl status docker
+5) docker --version
+
+make docker available to jenkins
+--------------------------------
+
+sudo usermod -aG docker jenkins
+
+need to open 8080 & 80 port number in EC2
+    8080 ----> jenkins
+    80 ----> docker
+go to EC2 instances --> security tab
+                            security group --> edit inbound rules
+                            ---> click on add rule ---> select custom TCP enter 8080 + add rule select HTTP 80 0.0.0.0/0
+
+
+add following plugins in jenkins
+---------------------------------
+
+1) GitLab
+2) WebHooks
+3) Docker
+4) DockerPipeline
+
+goto dashboard--> new item -->provide name(klufrontendpipeline) --> select pipeline --> create pipeline
+
+    --> select the buildtriggers--> checked on build when a change is pushed
+    
+17-10-2024
+----------
+default parameters in functions --> in ES6
+syntax:
+let demo_fun = (param1="KL university",param2="fullstack",param3="Devops") => {
+
+}
+
+callback functions
+------------------
+passing one function definition to argument as parameter to another function
+generally used for asynchronous function
+syntax:
+let fun = (num, callback)=>{
+    callback(num+5,false);
+}
+fun(5,(addRes,flag)=>{
+    if(!flag)
+        document.write(addRes);
+})
+not recommended hell of complex
+instead we go for promises
+
+DataStructures
+----------------
+organizing the data in effcient approach
+JavaScript supports following DataStructures
+    Map
+    Set
+    WeakMap
+    WeakSet
+
+WeekMap & WeekSet(useage)
+    keys should be Objects
+    for better memory optimization
+    are easily accessable to garbage collector
+
+    WeekMap: for objects(unused objets)
+    WeekSet: DOM manipulation
+
