@@ -414,6 +414,12 @@ clouser
     one function inside another function called as inner function
     Inner function accessing the outer function data is called clousre function
     in general, we will use closures to achieve security(private members)
-    
+
+Arrays manipulation
+-------------------
+
+
+
+
 
 
