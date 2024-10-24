@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Api Call</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        let make_api_call = new Promise((resolve,reject) =>{
+            $.ajax({
+                method:'GET',
+                url:"https://reqres.in/api/users?page=3",
+                success:(posRes) => {
+                    resolve(posRes)
+                },
+                error: (errRes) =>{
+                    reject(errRes)
+                }
+            })
+        })
+        make_api_call.then((data)=>{
+            console.log(data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

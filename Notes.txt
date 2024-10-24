@@ -418,6 +418,28 @@ clouser
 Arrays manipulation
 -------------------
 
+call(), bind(),apply()
+----------------------
+
+promises
+---------
+    promises are used to make asynchronous calls
+     or 
+    promises are alternative callback functions
+
+    promises have 3 states
+     1) resolve state
+     2) rejected state
+     3) pending state
+
+     how to create the promise
+        "Promise" is the predefined class used to create the Promises
+
+        we will consume Promises in two ways
+        1) then()
+        2) async & await
+
+to run the tasks at background we use "WebWorker"
 
 
 

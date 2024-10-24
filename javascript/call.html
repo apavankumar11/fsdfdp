@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Bind and Apply</title>
+</head>
+<body>
+    <script>
+        let obj={
+            key1:100
+        }
+        function demo_fun(param1,param2,param3){
+            document.write(this.key1 + param1 + param2 + param3)
+        }
+        demo_fun.call(obj,200,300,400)
+        let arr1 = [200,300,400]
+        demo_fun.apply(obj,arr1)
+        let new_func = demo_fun.bind(obj)
+        new_func(200,300,400)
+    </script>
+</body>
+</html>
