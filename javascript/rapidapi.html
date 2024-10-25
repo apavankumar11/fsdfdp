@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://open-weather13.p.rapidapi.com/city/mangalagiri/EN',
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '3bd13ebc58mshf946bba9aba1dd3p13d4e2jsncdc3ff35768e',
+		'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
+	}
+};
+let data;
+$.ajax(settings).done(function (response) {
+	data = JSON.stringify(response)
+    document.write(data)
+    document.write("<br>"+"Logintude: "+response["coord"]["lon"])
+    document.write("<br>"+"Tempurature: "+response["main"]["temp"])
+    // document.write("<br>"+"Speed: "+response["sys"]["speed"])
+    console.log(response);
+});
+// document.write(data)
+    </script>
+</body>
+</html>

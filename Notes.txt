@@ -442,6 +442,21 @@ promises
 to run the tasks at background we use "WebWorker"
 
 
+React
+-----
+Introduction
+installation
+Components
+state
+props
+styles
+events
+Single Page Application(Routing)
+API calls
+State Management
+Tools
+
+
 
 
 

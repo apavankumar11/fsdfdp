@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+    <style>
+        .success{
+            color: green;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>KL University</legend>
+        <input type="text" name="username" id="username" placeholder="Enter the UserName">
+        <br><br>
+        <input type="password" name="password" id="password" placeholder="Enter the Password">
+        <br><br>
+        <button onclick="login()">Login</button>
+        <br><br>
+        <h1 id="res"></h1>
+    </fieldset>
+    <script>
+        let login = ()=>{
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let h1 = document.getElementById("res");
+            if(username == "pavan" && password=="pavan"){
+                if(h1.classList.contains("error")){
+                    h1.classList.remove("error")
+                }
+                h1.innerHTML = "Login Success";
+                h1.classList.add("success");
+            }else{
+                if(h1.classList.contains("success")){
+                    h1.classList.remove("success");
+                }
+                h1.innerHTML = "Login Failed";
+                h1.classList.add("error");
+            }
+        }
+    </script>
+</body>
+</html>
